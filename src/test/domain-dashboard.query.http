@@ -1,0 +1,73 @@
+
+// test the api with the following curl command booking
+
+# GET http://localhost:3001/api/domain/booking/?date=2021-10-10
+
+// test the api with the following curl command register
+
+# GET http://localhost:3001/api/domain/register/?appointmentDate=2021-10-10
+
+// test the api with the following curl command customer
+
+# GET http://localhost:3001/api/domain/customer/?cussn=cuss123123123
+
+
+// create new customer
+
+# POST http://localhost:3001/api/domain/customer
+# Content-Type: application/json
+
+# {
+# 	"name": "test",
+# 	"address": "test",
+# 	"phone": "test",
+# 	"cussn": "cuss123123rr",
+# 	"tid": "tid1231231dd",
+# 	"state": {
+# 		"state1": "state1",
+# 		"state2": "state2"
+# 	},
+# 	"data": {
+# 		"data1": "data1",
+# 		"data2": "data2"
+# 	}
+# }
+
+# // create new booking
+# POST http://localhost:3001/api/domain/booking
+# Content-Type: application/json
+
+# {
+# 	"status": "pending",
+# 	"date": "2021-10-10",
+# 	"customer": "615e8c6e7c5e3a001f8eacac",
+# 	"customerInfo": {
+# 		"name": "Aaron pp",
+# 		"address": "123 Fake Street",
+# 		"phone": "555-1234"
+# 	}
+# }
+
+// create new register
+
+# POST http://localhost:3001/api/domain/register
+# Content-Type: application/json
+
+# {
+# 	"appointmentDate": "2021-10-10",
+# 	"appointmentTime": "10:00 AM",
+# 	"customer": "615e8c6e7c5e3a001f8e3a5d",
+# 	"appointmentType": "Consultation",
+# 	"specialRequirements": "None",
+# 	"status": "Pending",
+# 	"notes": "Additional notes or information"
+# }
+
+
+// put booking status
+
+# PUT http://localhost:3001/api/domain/booking/66237b2b7dc2122fce672991
+# Content-Type: application/json
+
+
+
